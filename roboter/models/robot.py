@@ -1,3 +1,5 @@
+from roboter.models import ranking_model 
+
 class Robot():
      def __init__(self, user_name = None, favorite_restaurant = None, speaking_color = 'red'):
        self.user_name = user_name 
@@ -18,6 +20,7 @@ class Robot():
 
     
      def hello(self):
+        ranking_model = ranking_model.RankingModel()
         print("====================")
         print("こんにちは！私はRobokoです。あなたの名前は何ですか？")
         print("====================")
